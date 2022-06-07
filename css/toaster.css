@@ -1,0 +1,35 @@
+.toaster-wrapper {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.toaster-wrapper div:first-child {
+  margin-top: 0;
+}
+.toaster-element {
+  width: 25rem;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #1f2937;
+  border-radius: 0.8rem;
+  padding: 1.6rem 2rem;
+}
+.toaster-element img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.toaster-element-success {
+  border: 2px solid #22c55e;
+}
+.toaster-element-error {
+  border: 2px solid #ef4444;
+}
+
+/*# sourceMappingURL=toaster.css.map */

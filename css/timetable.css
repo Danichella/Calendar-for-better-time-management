@@ -20,7 +20,7 @@
 .timetable-grid::-webkit-scrollbar {
   display: none;
 }
-.timetable-grid div:nth-child(14) p:first-child {
+.timetable-today-pointer p:first-child {
   background-color: #2563eb;
   color: #ffffff;
 }
@@ -62,6 +62,7 @@
   background: none;
 }
 .timetable-day-of-month-event {
+  text-decoration: none;
   background-color: #0284c7;
   font-size: 1.5rem;
   color: #ffffff;
