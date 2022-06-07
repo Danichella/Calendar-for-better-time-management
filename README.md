@@ -19,3 +19,17 @@
  ```bash
   sass sass:css
  ```
+
+### Lab 2
+
+ - Before first time server starting run this command
+
+ ```bash
+  npm install
+ ```
+
+ - To start application run
+
+ ```bash
+   npm start
+ ```
