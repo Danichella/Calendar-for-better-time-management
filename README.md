@@ -20,7 +20,7 @@
   sass sass:css
  ```
 
-### Lab 2
+### Lab 2-4
 
  - Before first time server starting run this command
 
