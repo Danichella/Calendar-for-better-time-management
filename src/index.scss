@@ -1,0 +1,13 @@
+@import './assets/sass/colors.scss';
+@import './assets/sass/media_queries.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: $neutral-100;
+}
