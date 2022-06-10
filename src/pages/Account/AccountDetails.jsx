@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Header, EntityDetailsForm, addNotification } from '../../components';
+import { Header, EntityDetailsForm, Toaster } from '../../components';
 import { useAccount } from '../../api';
 import { FillInServerResponse } from '../../helpers';
 
 export const AccountDetails = () => {
+  const { addNotification } = Toaster();
   const navigate = useNavigate();
   const { getAccountDetails } = useAccount();
   const [data, setData] = useState([]);

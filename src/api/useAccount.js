@@ -1,8 +1,9 @@
 import { useApi } from './useApi.js';
-import { addNotification } from '../components/Toaster';
+import { Toaster } from '../components';
 import { useNavigate } from 'react-router-dom';
 
 export const useAccount = () => {
+  const { addNotification } = Toaster();
   const navigate = useNavigate();
   const { get, put } = useApi();
 
