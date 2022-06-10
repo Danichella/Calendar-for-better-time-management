@@ -1,10 +1,12 @@
 import React from 'react';
 import { Header, EditEntityForm } from '../../components';
-import { useHandleInputForm } from '../../helpers/useHandleInputForm';
 import { useNavigate } from 'react-router-dom';
+import { useEvent } from '../../api';
+import { PrepareDataForRequest, useHandleInputForm } from '../../helpers';
 
 export const AddNewEvent = () => {
   const navigate = useNavigate();
+  const { createEvent } = useEvent();
   const initialValues = [
     { id: 'title', title: 'event title', value: null },
     { id: 'date', title: 'event date', value: null, type: 'date' },
@@ -22,11 +24,11 @@ export const AddNewEvent = () => {
       <Header
         secondary={{
           title: 'Cancel',
-          callback: () => navigate('/'),
+          callback: () => navigate(-1),
         }}
         primary={{
           title: 'Save Changes',
-          callback: () => navigate('/'),
+          callback: () => createEvent(PrepareDataForRequest(data)),
         }}
       />
       <EditEntityForm

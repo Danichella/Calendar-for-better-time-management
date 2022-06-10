@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header, EditEntityForm } from '../../components';
 import { useNavigate } from 'react-router-dom';
-import { useHandleInputForm } from '../../helpers/useHandleInputForm';
+import { useAccount } from '../../api';
+import {
+  FillInServerResponse,
+  PrepareDataForRequest,
+  useHandleInputForm,
+} from '../../helpers';
 
 export const EditAccountDetails = () => {
   const navigate = useNavigate();
+  const { getAccountDetails, editAccountDetails } = useAccount();
   const initialValues = [
-    { id: 'username', title: 'username', value: 'Danichella' },
-    { id: 'firstName', title: 'first name', value: 'Danyil' },
-    { id: 'lastName', title: 'last name', value: 'Dunaiskyi' },
-    { id: 'email', title: 'email', value: 'daniladun07@gmail.com' },
-    { id: 'password', title: 'password', value: '123456', type: 'password' },
-    {
-      id: 'confirmPassword',
-      title: 'confirm password',
-      value: '123456',
-      type: 'password',
-      placeholder: 'Enter your password again',
-    },
+    { id: 'username', title: 'username', value: null },
+    { id: 'firstName', title: 'first name', value: null },
+    { id: 'lastName', title: 'last name', value: null },
+    { id: 'email', title: 'email', value: null },
   ];
-  const { data, onChangeHandler } = useHandleInputForm(initialValues);
+  const { data, setData, onChangeHandler } = useHandleInputForm(initialValues);
+
+  const fetchData = async () => {
+    const responseData = await getAccountDetails();
+    if (responseData) {
+      setData(FillInServerResponse(responseData, initialValues));
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -30,7 +39,7 @@ export const EditAccountDetails = () => {
         }}
         primary={{
           title: 'Save Changes',
-          callback: () => navigate('/accounts'),
+          callback: () => editAccountDetails(PrepareDataForRequest(data)),
         }}
       />
       <EditEntityForm data={data} onChangeHandler={onChangeHandler} />
