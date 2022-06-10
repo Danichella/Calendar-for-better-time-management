@@ -13,6 +13,7 @@ export const useHandleInputForm = (initialValues) => {
 
   return {
     data,
+    setData,
     onChangeHandler,
   };
 };

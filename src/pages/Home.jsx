@@ -1,9 +1,23 @@
-import React from 'react';
-import { Header, Timetable } from '../components';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Header, Timetable } from '../components';
+import { useEvent } from '../api';
 
 export const Home = () => {
   const navigate = useNavigate();
+  const { getEventList } = useEvent();
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    const responseData = await getEventList();
+    if (responseData) {
+      setData(responseData);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -17,7 +31,7 @@ export const Home = () => {
           callback: () => navigate('/events/new'),
         }}
       />
-      <Timetable />
+      <Timetable eventsList={data} />
     </div>
   );
 };

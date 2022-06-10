@@ -1,10 +1,10 @@
 import React from 'react';
 import { AuthorizationForm } from '../components';
-import { useNavigate } from 'react-router-dom';
-import { useHandleInputForm } from '../helpers/useHandleInputForm';
+import { useHandleInputForm, PrepareDataForRequest } from '../helpers';
+import { useAuthorization } from '../api';
 
 export const Login = () => {
-  const navigate = useNavigate();
+  const { login } = useAuthorization();
   const initialValues = [
     { id: 'email', title: 'email', value: null },
     { id: 'password', title: 'password', value: null, type: 'password' },
@@ -16,7 +16,7 @@ export const Login = () => {
       data={data}
       onChangeHandler={onChangeHandler}
       submitTitle="Log in"
-      onSubmitClick={() => navigate('/')}
+      onSubmitClick={() => login(PrepareDataForRequest(data))}
     >
       Don't have an account? <a href="/sign_up">Sign up</a>
     </AuthorizationForm>
