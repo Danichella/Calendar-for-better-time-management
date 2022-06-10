@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import {
   Home,
   AccountDetails,
@@ -9,21 +10,25 @@ import {
   Login,
   SignUp,
 } from './pages';
+import { ToasterContext, ToasterWrapper } from './components';
 
 const App = () => {
+  const [toasts, setToasts] = useState([]);
+
   return (
-    <BrowserRouter>
+    <ToasterContext.Provider value={{ toasts, setToasts }}>
       <Routes>
         <Route path="/" exec element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign_up" element={<SignUp />} />
         <Route path="/accounts/edit" element={<EditAccountDetails />} />
         <Route path="/accounts" element={<AccountDetails />} />
-        <Route path="/events/edit" element={<EditEventDetails />} />
         <Route path="/events/new" element={<AddNewEvent />} />
-        <Route path="/events" element={<EventDetails />} />
+        <Route path="/events/:id/edit" element={<EditEventDetails />} />
+        <Route path="/events/:id" element={<EventDetails />} />
       </Routes>
-    </BrowserRouter>
+      <ToasterWrapper toasts={toasts} />
+    </ToasterContext.Provider>
   );
 };
 
