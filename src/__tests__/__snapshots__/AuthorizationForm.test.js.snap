@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorizationForm should match snapshot 1`] = `
+<div
+  className="authorization-wrapper"
+>
+  <div
+    className="authorization-form-wrapper"
+  >
+    <img
+      alt="Logo"
+      className="authorization-form-logo"
+      src={
+        Object {
+          "createTransformer": [Function],
+        }
+      }
+    />
+    <div
+      key="0"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Username:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your username"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      key="1"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        First name:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your first name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      key="2"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Last name:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your last name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      key="3"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Email:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your email"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      key="4"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Password:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your password"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      key="5"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Confirm password:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your password again"
+        type="password"
+        value=""
+      />
+    </div>
+    <button
+      className="authorization-submit-button authorization-space-between"
+      onClick={[MockFunction]}
+    >
+      Sign up
+    </button>
+    <p
+      className="authorization-additional-message authorization-space-between"
+    />
+  </div>
+</div>
+`;

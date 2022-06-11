@@ -1,3 +1,4 @@
+import React from 'react';
 import '../assets/sass/header.scss';
 import Logo from '../assets/img/Logo.png';
 

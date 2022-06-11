@@ -1,3 +1,4 @@
+import React from 'react';
 import '../assets/sass/authorization.scss';
 
 export const EditEntityForm = ({

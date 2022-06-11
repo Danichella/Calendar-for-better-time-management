@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Home,
   AccountDetails,
@@ -10,7 +10,7 @@ import {
   Login,
   SignUp,
 } from './pages';
-import { Toaster, ToasterContext, ToasterWrapper } from './components';
+import { ToasterContext, ToasterWrapper } from './components';
 
 const App = () => {
   const navigate = useNavigate();
@@ -19,11 +19,11 @@ const App = () => {
 
   useEffect(() => {
     if (
-      !window.localStorage.getItem('token', null) &&
+      !localStorage.getItem('token', null) &&
       location.pathname !== '/sign_up'
     )
       navigate('/login');
-  }, [window.localStorage.getItem('token', null)]);
+  }, [localStorage.getItem('token', null)]);
 
   return (
     <ToasterContext.Provider value={{ toasts, setToasts }}>

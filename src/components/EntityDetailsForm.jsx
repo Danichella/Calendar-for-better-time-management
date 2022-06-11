@@ -1,3 +1,4 @@
+import React from 'react';
 import '../assets/sass/entity_details.scss';
 import '../assets/sass/authorization.scss';
 import EditIcon from '../assets/img/EditIcon.svg';
