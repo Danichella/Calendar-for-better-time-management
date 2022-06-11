@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+<div
+  className="header-wrapper"
+>
+  <img
+    alt="Logo"
+    className="header-logo"
+    src={
+      Object {
+        "createTransformer": [Function],
+      }
+    }
+  />
+  <div
+    className="header-actions-wrapper"
+  >
+    <button
+      className="header-actions-secondary-button"
+      onClick={[MockFunction]}
+    >
+      My Account
+    </button>
+    <button
+      className="header-actions-primary-button"
+      onClick={[MockFunction]}
+    >
+      Add new event
+    </button>
+  </div>
+</div>
+`;

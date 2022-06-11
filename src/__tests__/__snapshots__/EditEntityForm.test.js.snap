@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditEntityForm should match snapshot 1`] = `
+<div
+  className="authorization-wrapper"
+>
+  <div
+    className="authorization-form-wrapper"
+  >
+    <div
+      key="0"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Event title:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your event title"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      key="1"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Event date:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter your event date"
+        type="date"
+        value=""
+      />
+    </div>
+    <div
+      key="2"
+    >
+      <p
+        className="authorization-input-label authorization-space-between"
+      >
+        Invited users:
+      </p>
+      <input
+        className="authorization-input"
+        onChange={[Function]}
+        placeholder="Enter email of users you want invite"
+        type="text"
+        value=""
+      />
+    </div>
+    <p
+      className="authorization-helper-text"
+    >
+      Separate emails by space to invite multiple users
+    </p>
+  </div>
+</div>
+`;

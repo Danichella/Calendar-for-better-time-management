@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntityDetailsForm should match snapshot 1`] = `
+<div
+  className="entity-details-wrapper"
+>
+  <div
+    className="authorization-form-wrapper"
+  >
+    <div
+      className="entity-details-header-wrapper"
+    >
+      <p>
+        Event Details
+      </p>
+      <img
+        alt="Edit"
+        onClick={[MockFunction]}
+        src={
+          Object {
+            "createTransformer": [Function],
+          }
+        }
+      />
+    </div>
+    <div
+      className="entity-details-data-field-wrapper"
+      key="0"
+    >
+      <p>
+        event title
+      </p>
+      <p>
+        Title
+      </p>
+    </div>
+    <div
+      className="entity-details-data-field-wrapper"
+      key="1"
+    >
+      <p>
+        event date
+      </p>
+      <p>
+        2022-06-12
+      </p>
+    </div>
+    <div
+      className="entity-details-data-field-with-multiple-values-wrapper"
+      key="2"
+    >
+      <p>
+        Invited users:
+      </p>
+      <p
+        key="0"
+      >
+        test@gmail.com
+      </p>
+    </div>
+  </div>
+</div>
+`;

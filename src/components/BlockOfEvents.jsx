@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import '../assets/sass/timetable.scss';
 
 export const BlockOfEvents = ({ eventsList, currentMonth, currentDay }) => {
